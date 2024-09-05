@@ -458,7 +458,13 @@ starlight-tabs:where(.astro-esqgolmp){display:block}.tablist-wrapper:where(.astr
 
 
 
-<table><thead><tr><th>参数名</th><th>含义</th><th>可选值</th><th>默认值</th></tr></thead><tbody><tr><td>nacos.core.protocol.raft.election_timeout_ms</td><td>Raft协议选举超时时间，单位ms</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.core.protocol.raft.snapshot_interval_secs</td><td>Raft协议快照写入间隔时间，单位s</td><td>正整数</td><td>3600</td></tr><tr><td>nacos.core.protocol.raft.core_thread_num</td><td>Raft协议的核心线程数，用于处理Raft同步的请求线程数</td><td>正整数</td><td>8</td></tr><tr><td>nacos.core.protocol.raft.cli_service_thread_num</td><td>Raft协议的核心线程数，用于发起Raft同步数据的请求线程数</td><td>正整数</td><td>4</td></tr><tr><td>nacos.core.protocol.raft.rpc_request_timeout_ms</td><td>Raft协议请求的超时时间，单位ms</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.core.protocol.raft.max_byte_count_per_rpc</td><td>Raft协议单次请求最大字节数</td><td>正整数</td><td>128 * 1024</td></tr><tr><td>nacos.core.protocol.raft.max_entries_size</td><td>Raft协议单个日志的最大个数</td><td>正整数</td><td>1024</td></tr><tr><td>nacos.core.protocol.raft.max_body_size</td><td>Raft协议发送日志的最大 body 大小</td><td>正整数</td><td>512 * 1024</td></tr><tr><td>nacos.core.protocol.raft.max_append_buffer_size</td><td>Raft协议日志存储缓冲区最大大小</td><td>正整数</td><td>256 * 1024</td></tr><tr><td>nacos.core.protocol.raft.max_election_delay_ms</td><td>Raft协议选举的最大随机间隔，选举定时器间隔会在指定时间之外随机的最大范围</td><td>正整数</td><td>1000</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th>参数名</th><th>含义</th><th>可选值</th><th>默认值</th></tr></thead><tbody><tr><td>nacos.core.protocol.raft.election_timeout_ms</td><td>Raft协议选举超时时间，单位ms</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.core.protocol.raft.snapshot_interval_secs</td><td>Raft协议快照写入间隔时间，单位s</td><td>正整数</td><td>3600</td></tr><tr><td>nacos.core.protocol.raft.core_thread_num</td><td>Raft协议的核心线程数，用于处理Raft同步的请求线程数</td><td>正整数</td><td>8</td></tr><tr><td>nacos.core.protocol.raft.cli_service_thread_num</td><td>Raft协议的核心线程数，用于发起Raft同步数据的请求线程数</td><td>正整数</td><td>4</td></tr><tr><td>nacos.core.protocol.raft.rpc_request_timeout_ms</td><td>Raft协议请求的超时时间，单位ms</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.core.protocol.raft.max_byte_count_per_rpc</td><td>Raft协议单次请求最大字节数</td><td>正整数</td><td>128 * 1024</td></tr><tr><td>nacos.core.protocol.raft.max_entries_size</td><td>Raft协议单个日志的最大个数</td><td>正整数</td><td>1024</td></tr><tr><td>nacos.core.protocol.raft.max_body_size</td><td>Raft协议发送日志的最大 body 大小</td><td>正整数</td><td>512 * 1024</td></tr><tr><td>nacos.core.protocol.raft.max_append_buffer_size</td><td>Raft协议日志存储缓冲区最大大小</td><td>正整数</td><td>256 * 1024</td></tr><tr><td>nacos.core.protocol.raft.max_election_delay_ms</td><td>Raft协议选举的最大随机间隔，选举定时器间隔会在指定时间之外随机的最大范围</td><td>正整数</td><td>1000</td></tr><tr><td>nacos.core.protocol.raft.strict_mode</td><td>从<code dir="auto">2.4.2</code>版本开始支持，Raft的启动校验是否采用严格模式，开启后，当raft无法选举时，引擎的readiness接口将返回500</td><td>true/false</td><td>false</td></tr></tbody></table>
 <h3 id="14-naming模块">1.4. Naming模块</h3>
 
 
@@ -525,7 +531,13 @@ starlight-tabs:where(.astro-esqgolmp){display:block}.tablist-wrapper:where(.astr
 
 
 
-<table><thead><tr><th>参数名</th><th>含义</th><th>可选值</th><th>默认值</th></tr></thead><tbody><tr><td>nacos.naming.expireInstance</td><td>是否自动摘除临时实例</td><td>true/false</td><td>true</td></tr><tr><td>nacos.naming.clean.empty-service.interval</td><td>Naming模块的空服务清理间隔，单位毫秒</td><td>正整数</td><td>60 * 1000</td></tr><tr><td>nacos.naming.clean.empty-service.expired-time</td><td>Naming模块的空服务过期时间，过期的空服务会被清理，单位毫秒</td><td>正整数</td><td>60 * 1000</td></tr><tr><td>nacos.naming.clean.expired-metadata.interval</td><td>Naming模块的元数据清理间隔，单位毫秒</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.naming.clean.expired-metadata.expired-time</td><td>Naming模块的元数据过期时间，过期的元数据会被清理，单位毫秒</td><td>正整数</td><td>60 * 1000</td></tr><tr><td>nacos.naming.client.expired.time</td><td>临时Client对应数据的过期时间，当Distro协议停止对该Client的数据进行续约且时间超过该值时，该Client数据将被删除，主要应对Nacos Server之间断网的场景，单位毫秒</td><td>正整数</td><td>3 * 60 * 1000</td></tr><tr><td>nacos.naming.push.pushTaskDelay</td><td>服务数据推送的延迟时间，同一个人服务处于延迟时间内多次变更时，会被合并为一次推送，单位为毫秒</td><td>正整数</td><td>500</td></tr><tr><td>nacos.naming.push.pushTaskTimeout</td><td>服务数据推送的超时时间，超过该时间未收到客户端的确认，将延迟后重试，单位为毫秒</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.naming.push.pushTaskRetryDelay</td><td>服务数据推送失败后的重试间隔时间，单位为毫秒</td><td>正整数</td><td>1000</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th>参数名</th><th>含义</th><th>可选值</th><th>默认值</th></tr></thead><tbody><tr><td>nacos.naming.expireInstance</td><td>是否自动摘除临时实例</td><td>true/false</td><td>true</td></tr><tr><td>nacos.naming.data.warmup</td><td>从<code dir="auto">2.4.2</code>版本开始支持，是否在启动时校验数据是否预热，开启可能造成Server的readiness接口返回500，需要等待预热完成，启动时间变长</td><td>true/false</td><td>false</td></tr><tr><td>nacos.naming.clean.empty-service.interval</td><td>Naming模块的空服务清理间隔，单位毫秒</td><td>正整数</td><td>60 * 1000</td></tr><tr><td>nacos.naming.clean.empty-service.expired-time</td><td>Naming模块的空服务过期时间，过期的空服务会被清理，单位毫秒</td><td>正整数</td><td>60 * 1000</td></tr><tr><td>nacos.naming.clean.expired-metadata.interval</td><td>Naming模块的元数据清理间隔，单位毫秒</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.naming.clean.expired-metadata.expired-time</td><td>Naming模块的元数据过期时间，过期的元数据会被清理，单位毫秒</td><td>正整数</td><td>60 * 1000</td></tr><tr><td>nacos.naming.client.expired.time</td><td>临时Client对应数据的过期时间，当Distro协议停止对该Client的数据进行续约且时间超过该值时，该Client数据将被删除，主要应对Nacos Server之间断网的场景，单位毫秒</td><td>正整数</td><td>3 * 60 * 1000</td></tr><tr><td>nacos.naming.push.pushTaskDelay</td><td>服务数据推送的延迟时间，同一个人服务处于延迟时间内多次变更时，会被合并为一次推送，单位为毫秒</td><td>正整数</td><td>500</td></tr><tr><td>nacos.naming.push.pushTaskTimeout</td><td>服务数据推送的超时时间，超过该时间未收到客户端的确认，将延迟后重试，单位为毫秒</td><td>正整数</td><td>5000</td></tr><tr><td>nacos.naming.push.pushTaskRetryDelay</td><td>服务数据推送失败后的重试间隔时间，单位为毫秒</td><td>正整数</td><td>1000</td></tr></tbody></table>
 <h3 id="15-config模块">1.5. Config模块</h3>
 
 
