@@ -10,7 +10,7 @@ export const TOPBAR = {
     "mobileText": "云原生开源开发者沙龙 | AI 应用工程化专场杭州站邀您参会",
     "link": "https://nacos.io/blog/nacos-gvr7dx_awbbpb_ghknwrgwcl15ho3z/?source=activity_activity-preview/",
     "target": "_blank",
-    "display": true
+    "display": false
 }
 export const MEDIARESOURCE = [
     {
