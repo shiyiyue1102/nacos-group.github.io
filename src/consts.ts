@@ -6,11 +6,11 @@ export const SITE_DESCRIPTION = 'Welcome to my website!';
 
 // 吊顶提示文案
 export const TOPBAR = {
-    "text": "云原生开源开发者沙龙 | AI 应用工程化专场杭州站邀您参会",
-    "mobileText": "云原生开源开发者沙龙 | AI 应用工程化专场杭州站邀您参会",
-    "link": "https://nacos.io/blog/nacos-gvr7dx_awbbpb_ghknwrgwcl15ho3z/?source=activity_activity-preview/",
+    "text": "Nacos 配置中心变更利器：自定义标签灰度",
+    "mobileText": "Nacos 配置中心变更利器：自定义标签灰度",
+    "link": "https://nacos.io/blog/nacos-gvr7dx_awbbpb_ir01zzd3q20fa3xq/?source=blog",
     "target": "_blank",
-    "display": false
+    "display": true
 }
 export const MEDIARESOURCE = [
     {
