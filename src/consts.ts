@@ -6,9 +6,9 @@ export const SITE_DESCRIPTION = 'Welcome to my website!';
 
 // 吊顶提示文案
 export const TOPBAR = {
-    "text": "Nacos 配置中心变更利器：自定义标签灰度",
-    "mobileText": "Nacos 配置中心变更利器：自定义标签灰度",
-    "link": "https://nacos.io/blog/nacos-gvr7dx_awbbpb_ir01zzd3q20fa3xq/?source=blog",
+    "text": "活动报名 | AI 应用企业开发者沙龙·深圳站",
+    "mobileText": "活动报名 | AI 应用企业开发者沙龙·深圳站",
+    "link": "https://summit.aliyun.com/cloudnative2024-AI-shenzhen",
     "target": "_blank",
     "display": true
 }
