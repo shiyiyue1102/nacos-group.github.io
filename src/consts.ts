@@ -10,7 +10,7 @@ export const TOPBAR = {
     "mobileText": "活动报名 | AI 应用企业开发者沙龙·深圳站",
     "link": "https://summit.aliyun.com/cloudnative2024-AI-shenzhen",
     "target": "_blank",
-    "display": true
+    "display": false
 }
 export const MEDIARESOURCE = [
     {
