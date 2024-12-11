@@ -4,7 +4,7 @@ description: "铭师堂的云原生升级实践"
 date: "2024-12-11"
 category: "case"
 keywords: ["Nacos"]
-authors: "CH3CHO"
+authors: "Heimanba"
 ---
 
 作者：升学e网通研发部基建团队
