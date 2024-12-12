@@ -6,11 +6,11 @@ export const SITE_DESCRIPTION = 'Welcome to my website!';
 
 // 吊顶提示文案
 export const TOPBAR = {
-    "text": "活动报名 | AI 应用企业开发者沙龙·深圳站",
-    "mobileText": "活动报名 | AI 应用企业开发者沙龙·深圳站",
-    "link": "https://summit.aliyun.com/cloudnative2024-AI-shenzhen",
+    "text": "铭师堂的云原生升级实践",
+    "mobileText": "铭师堂的云原生升级实践",
+    "link": "https://nacos.io/blog/nacos-gvr7dx_awbbpb_rcexb7h4kq8u9ei9/?spm=5238cd80.66ce2cd4.0.0.237cf2120E3Lm5",
     "target": "_blank",
-    "display": false
+    "display": true
 }
 export const MEDIARESOURCE = [
     {
@@ -33,7 +33,7 @@ export const MEDIARESOURCE = [
         "src": "https://cloud.video.taobao.com/vod/play/REFkazc0bXZaVE82emRHbklyTEdsNFFUMXFoNnp2NXBPaEFUNFNDYUVRRzZQZWw1SnpKVVVCTlh4OVFON0V5UUVMUDduY1RJak82VE1sdXdHTjNOaHc9PQ",
         "cover": "https://img.alicdn.com/imgextra/i1/O1CN01fkLmjc1n7HuqYQst1_!!6000000005042-0-tps-2300-1166.jpg"
     }
-];
+]
 
 // 文档根据版本区分的提示banner
 export const DOCS_BANNER = {
