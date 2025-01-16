@@ -43,8 +43,20 @@
         },
         "items": [
             {
+                "label": "概览",
+                "autogenerate": { "directory": "manual/user/overview" }
+            },
+            {
                 "label": "JAVA SDK",
                 "autogenerate": { "directory": "manual/user/java-sdk" }
+            },
+            {
+                "label": "Golang SDK",
+                "autogenerate": { "directory": "manual/user/go-sdk" }
+            },
+            {
+                "label": "Python SDK",
+                "autogenerate": { "directory": "manual/user/python-sdk" }
             },
             {
                 "label": "Open API 手册",
@@ -68,11 +80,11 @@
                 "link": "docs/manual/user/parameters-check"
             },
             {
-                "label": "其他语言SDK",
+                "label": "寻址说明",
                 "translations": {
-                    "en": "Other SDK"
+                    "en": "Addressing"
                 },
-                "link": "docs/manual/user/other-language"
+                "link": "docs/manual/user/addressing"
             }
         ]
     },
@@ -142,6 +154,13 @@
         "autogenerate": { "directory": "plugin" }
     },
     {
+        "label": "测试手册",
+        "translations": {
+            "en": "Test Manual"
+        },
+        "autogenerate": { "directory": "manual/test" }
+    },
+    {
         "label": "生态融合",
         "translations": {
             "en": "Ecology"
@@ -169,6 +188,13 @@
         },
         "collapsed": true,
         "items": [
+            {
+                "label": "什么是 Nacos",
+                "translations": {
+                    "en": "What is Nacos"
+                },
+                "link": "docs/what-is-nacos"
+            },
             {
                 "label": "升级",
                 "translations": {

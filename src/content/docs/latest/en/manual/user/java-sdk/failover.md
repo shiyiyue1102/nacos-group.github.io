@@ -1,12 +1,12 @@
 ---
-title: Java SDK Failover
+title: Nacos Java SDK Failover
 keywords: [Failover]
 description: Java SDL Failover manual
 sidebar:
   order: 3
 ---
 
-# Java SDK 容灾
+# Nacos Java SDK 容灾
 
 我们可以在客户端开启本地容灾，用来应对Nacos服务端出现问题时，保证客户端的数据和接口稳定性。
 
