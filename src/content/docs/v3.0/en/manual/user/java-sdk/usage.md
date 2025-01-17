@@ -449,9 +449,9 @@ try {
 #### 描述
 
 通过fuzzyWatch接口可以对指定分组group和配置dataId规则的配置进行批量订阅，
-可通过*进行模糊匹配。
+可通过*进行前缀模糊，后缀模糊，双边模糊匹配。
 <br/>模糊订阅功能仅会推送配置的新增以及删除事件，并不会直接推送配置变更的内容，可在配置模糊订阅的监听器中结合addListener接口实现配置内容的变更监听。<br/>
-处于稳定性考虑，Nacos对模糊订阅的规则数量以及单个规则匹配的配置数量有上限保护。具体参加配置模糊订阅容量保护机制一节。
+处于稳定性考虑，Nacos对模糊订阅的规则数量以及单个规则匹配的配置数量有上限保护。具体参照配置模糊订阅容量保护机制一节。
 
 ```java
 
@@ -516,11 +516,11 @@ void cancelFuzzyWatch(String groupNamePattern, FuzzyWatchEventWatcher watcher) ;
 
 #### 请求参数
 
-| 参数名 | 参数类型 | 描述                                                                         |
-| :--- | :--- |:---------------------------------------------------------------------------|
-| dataIdPattern | string | 配置ID匹配规则，支持a.前缀匹配(如,mydataId\*) b.后缀匹配(如*mydatdId)，c.前后缀匹配(如\*mydatadId\*) |
-| groupNamePattern | string | 配置分组匹配规则，支持a.前缀匹配(如 mygroup*) b.后缀匹配(如 \*mygroup)，c.前后缀匹配(如 \*mygroup\*)   |      |
-| watcher | FuzzyWatchEventWatcher | 模糊订阅监听器                                                                    |
+| 参数名 | 参数类型 | 描述                                                                              |
+| :--- | :--- |:--------------------------------------------------------------------------------|
+| dataIdPattern | string | 配置ID匹配规则，支持a.前缀模糊匹配(如,mydataId\*) b.后缀模糊匹配(如*mydatdId)，c.双边模糊匹配(如\*mydatadId\*) |
+| groupNamePattern | string | 配置分组匹配规则，支持a.前缀模糊匹配(如 mygroup*) b.后缀模糊匹配(如 \*mygroup)，c.双边模糊匹配(如 \*mygroup\*)        |      |
+| watcher | FuzzyWatchEventWatcher | 模糊订阅监听器                                                                         |
 
 
 #### FuzzyWatchEventWatcher模糊订阅监听器
@@ -567,7 +567,7 @@ String namespace=groupKeyItems[2];
 
 *注意：
 1.  当触发容量保护时，通过fuzzyWatchWithGroupKeys返回的配置列表可能不是完整的配置列表。
-2.  当触发配置数量上限保护时，配置删除的事件也可能因保护机制而导致无法推送的情况。
+2.  当触发配置数量上限保护时，配置删除的事件也可能因保护机制而导致无法推送。
 
 
 #### 请求示例
@@ -1241,7 +1241,7 @@ System.out.println(naming.getSubscribeServices());
 
 #### 描述
 
-通过fuzzyWatch接口可以对符指定group和serviceName规则的服务进行批量订阅，
+通过fuzzyWatch接口可以对符指定group和serviceName规则的服务进行批量订阅， 可通过*进行前缀模糊，后缀模糊，双边模糊匹配。
 <br/>模糊订阅功能仅会推送服务的新增以及删除事件，并不会直接推送服务下实例列表，可在服务模糊订阅的监听器中结合subscribe接口实现服务下实例列表的变更监听。<br/>
 处于稳定性考虑，Nacos对模糊订阅的规则数量以及单个规则匹配的服务数量有上限保护。具体参照服务模糊容量保护机制一节。
 
@@ -1309,11 +1309,11 @@ void cancelFuzzyWatch(String groupNamePattern, FuzzyWatchEventWatcher watcher) ;
 
 #### 请求参数
 
-| 参数名 | 参数类型 | 描述                                                                      |
-| :--- | :--- |:------------------------------------------------------------------------|
-| serviceNamePattern | string | 服务名匹配规则，支持a.前缀匹配(如,myservice*) b.后缀匹配(如service*)，c.前后缀匹配(如*service*) |
-| groupNamePattern | string | 配置分组匹配规则，支持a.前缀匹配(如 mygroup*) b.后缀匹配(如 mygroup*)，c.前后缀匹配(如 *mygroup*)   |      |
-| watcher | FuzzyWatchEventWatcher | 模糊订阅监听器                                                                 |
+| 参数名 | 参数类型 | 描述                                                                           |
+| :--- | :--- |:-----------------------------------------------------------------------------|
+| serviceNamePattern | string | 服务名匹配规则，支持a.前缀模糊匹配(如,myservice*) b.后缀模糊匹配(如\*service)，c.双边模糊匹配(如\*service\*) |
+| groupNamePattern | string | 配置分组匹配规则，支持a.前缀模糊匹配(如 mygroup*) b.后缀模糊匹配(如 \*mygroup)，c.双边模糊匹配(如 \*mygroup\*)     |      |
+| watcher | FuzzyWatchEventWatcher | 模糊订阅监听器                                                                      |
 
 
 #### FuzzyWatchEventWatcher模糊订阅监听器
